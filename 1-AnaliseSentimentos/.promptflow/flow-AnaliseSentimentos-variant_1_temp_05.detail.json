@@ -1,0 +1,174 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "ea958a13-3706-4009-9d44-67e1338393fc_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "frase": "Estou achado a nova temporada do Loki meio ruim."
+      },
+      "output": {
+        "resultado": "Negativo"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "ea958a13-3706-4009-9d44-67e1338393fc",
+      "root_run_id": "ea958a13-3706-4009-9d44-67e1338393fc",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2023-10-15T13:10:02.504989Z",
+      "end_time": "2023-10-15T13:10:03.554464Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Decida se a Frase abaixo \u00c3\u00a9 positiva, negativa ou neutra.\nFrase: {{text}}\nSentimento:\n",
+            "deployment_name": "text-davinci-003",
+            "temperature": 0.5,
+            "text": "Estou achado a nova temporada do Loki meio ruim.",
+            "stream": true
+          },
+          "output": [],
+          "start_time": 1697386202.520625,
+          "end_time": 1697386203.460814,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Decida se a Frase abaixo \u00c3\u00a9 positiva, negativa ou neutra.\nFrase: Estou achado a nova temporada do Loki meio ruim.\nSentimento:\n",
+                "engine": "text-davinci-003",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": true,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": [],
+              "start_time": 1697386202.520625,
+              "end_time": 1697386203.460181,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "AnaliseSentimentos"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 1.049475,
+        "total_tokens": 51
+      },
+      "result": {
+        "resultado": "Negativo"
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "AnaliseSentimentos",
+      "flow_run_id": "ea958a13-3706-4009-9d44-67e1338393fc",
+      "run_id": "ea958a13-3706-4009-9d44-67e1338393fc_AnaliseSentimentos_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "Decida se a Frase abaixo \u00c3\u00a9 positiva, negativa ou neutra.\nFrase: {{text}}\nSentimento:\n",
+        "deployment_name": "text-davinci-003",
+        "temperature": 0.5,
+        "text": "Estou achado a nova temporada do Loki meio ruim.",
+        "stream": true
+      },
+      "output": "<generator object generate_from_proxy at 0x000001EE456A3A00>",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "ea958a13-3706-4009-9d44-67e1338393fc_0",
+      "start_time": "2023-10-15T13:10:02.520625Z",
+      "end_time": "2023-10-15T13:10:03.554464Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Decida se a Frase abaixo \u00c3\u00a9 positiva, negativa ou neutra.\nFrase: {{text}}\nSentimento:\n",
+            "deployment_name": "text-davinci-003",
+            "temperature": 0.5,
+            "text": "Estou achado a nova temporada do Loki meio ruim.",
+            "stream": true
+          },
+          "output": [],
+          "start_time": 1697386202.520625,
+          "end_time": 1697386203.460814,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Decida se a Frase abaixo \u00c3\u00a9 positiva, negativa ou neutra.\nFrase: Estou achado a nova temporada do Loki meio ruim.\nSentimento:\n",
+                "engine": "text-davinci-003",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": true,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": [],
+              "start_time": 1697386202.520625,
+              "end_time": 1697386203.460181,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "AnaliseSentimentos"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "prompt_tokens": 51,
+        "completion_tokens": 0,
+        "total_tokens": 51,
+        "duration": 1.033839
+      },
+      "result": "<generator object generate_from_proxy at 0x000001EE456A3A00>"
+    }
+  ]
+}

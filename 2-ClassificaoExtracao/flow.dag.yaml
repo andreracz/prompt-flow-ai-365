@@ -1,0 +1,36 @@
+inputs:
+  texto:
+    type: string
+    default: Estamos com TODOS os usuários da empresa sem acesso ao e-mail, as
+      senhas não estão funcionando. Precisamos de ajuda imediata!
+  titulo:
+    type: string
+    default: Todos os usuários sem acesso
+outputs:
+  fila:
+    type: string
+    reference: ${to_dict.output.fila}
+  severidade:
+    type: string
+    reference: ${to_dict.output.severidade}
+nodes:
+- name: classificacao_extracao
+  type: llm
+  source:
+    type: code
+    path: classificacao_extracao.jinja2
+  inputs:
+    deployment_name: gpt-35-turbo-instruct
+    temperature: 0.5
+    texto: ${inputs.texto}
+    titulo: ${inputs.titulo}
+    max_tokens: 30
+  connection: openai
+  api: completion
+- name: to_dict
+  type: python
+  source:
+    type: code
+    path: to_dict.py
+  inputs:
+    input1: ${classificacao_extracao.output}

@@ -1,0 +1,38 @@
+inputs:
+  frase:
+    type: string
+    default: Estou achado a nova temporada do Loki meio ruim.
+outputs:
+  resultado:
+    type: string
+    reference: ${AnaliseSentimentos.output}
+nodes:
+- name: AnaliseSentimentos
+  use_variants: true
+node_variants:
+  AnaliseSentimentos:
+    default_variant_id: variant_0_temp_1
+    variants:
+      variant_0_temp_1:
+        node:
+          type: llm
+          source:
+            type: code
+            path: AnaliseSentimentos.jinja2
+          inputs:
+            deployment_name: text-davinci-003
+            text: ${inputs.frase}
+          connection: openai
+          api: completion
+      variant_1_temp_05:
+        node:
+          type: llm
+          source:
+            type: code
+            path: AnaliseSentimentos_variant_1.jinja2
+          inputs:
+            deployment_name: text-davinci-003
+            text: ${inputs.frase}
+            temperature: 0.5
+          connection: openai
+          api: completion

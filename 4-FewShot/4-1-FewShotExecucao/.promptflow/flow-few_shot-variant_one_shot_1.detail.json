@@ -1,0 +1,344 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+      },
+      "output": {
+        "resultado": "parcial"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757",
+      "root_run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2023-10-15T17:05:37.818102Z",
+      "end_time": "2023-10-15T17:05:38.624826Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n---\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o: \n",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "temperature": 0.5,
+            "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+          },
+          "output": "parcial",
+          "start_time": 1697400337.820525,
+          "end_time": 1697400338.575218,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n---\nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o: \n",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89yqYMjvOQhVep1kb2q241Cc9epu5",
+                "object": "text_completion",
+                "created": 1697389538,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": "parcial",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 2,
+                  "prompt_tokens": 580,
+                  "total_tokens": 582
+                }
+              },
+              "start_time": 1697400337.824617,
+              "end_time": 1697400338.574887,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "few_shot"
+        },
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "text": "parcial"
+          },
+          "output": "parcial",
+          "start_time": 1697400338.614227,
+          "end_time": 1697400338.617233,
+          "error": null,
+          "children": null,
+          "node_name": "normalize"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 0.806724,
+        "total_tokens": 582
+      },
+      "result": {
+        "resultado": "parcial"
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "few_shot",
+      "flow_run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757",
+      "run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757_few_shot_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n---\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o: \n",
+        "deployment_name": "gpt-35-turbo-instruct",
+        "temperature": 0.5,
+        "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+      },
+      "output": "parcial",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757_0",
+      "start_time": "2023-10-15T17:05:37.820525Z",
+      "end_time": "2023-10-15T17:05:38.612731Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n---\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o: \n",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "temperature": 0.5,
+            "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+          },
+          "output": "parcial",
+          "start_time": 1697400337.820525,
+          "end_time": 1697400338.575218,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n---\nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o: \n",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89yqYMjvOQhVep1kb2q241Cc9epu5",
+                "object": "text_completion",
+                "created": 1697389538,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": "parcial",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 2,
+                  "prompt_tokens": 580,
+                  "total_tokens": 582
+                }
+              },
+              "start_time": 1697400337.824617,
+              "end_time": 1697400338.574887,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "few_shot"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 2,
+        "prompt_tokens": 580,
+        "total_tokens": 582,
+        "duration": 0.792206
+      },
+      "result": "parcial"
+    },
+    {
+      "node": "normalize",
+      "flow_run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757",
+      "run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757_normalize_0",
+      "status": "Completed",
+      "inputs": {
+        "text": "parcial"
+      },
+      "output": "parcial",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "adff0ae3-e732-4a32-8e53-daecf59c6757_0",
+      "start_time": "2023-10-15T17:05:38.614227Z",
+      "end_time": "2023-10-15T17:05:38.622829Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "text": "parcial"
+          },
+          "output": "parcial",
+          "start_time": 1697400338.614227,
+          "end_time": 1697400338.617233,
+          "error": null,
+          "children": null,
+          "node_name": "normalize"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.008602
+      },
+      "result": "parcial"
+    }
+  ]
+}

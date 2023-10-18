@@ -1,0 +1,4 @@
+2023-10-16 08:38:14 -0300     556 execution          INFO     Start to run 1 nodes with concurrency level 16.
+2023-10-16 08:38:14 -0300     556 execution.flow     INFO     Executing node AnaliseSentimentos. node run id: aff165fb-e3c5-4000-a372-6735956650cc_AnaliseSentimentos_0
+2023-10-16 08:38:15 -0300     556 execution.flow     WARNING  Output of AnaliseSentimentos is not json serializable, use str to store it.
+2023-10-16 08:38:15 -0300     556 execution.flow     INFO     Node AnaliseSentimentos completes.

@@ -1,0 +1,65 @@
+inputs:
+  texto_decisao:
+    type: string
+    default: APELAÇÃO CIVEL. AÇÃO COMINATÓRIA COM PEDIDO DE ANTECIPAÇÃO DE TUTELA.
+      FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR NÃO ACOLHIDA. LEGITIMIDADE
+      PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA
+      ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE
+      ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVALÊNCIA DO
+      DIREITO À SAÚDE EM DETRIMENTO ÀS LIMITAÇÕES ORÇAMENTARIAS DO PODER
+      PÚBLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM
+      FASE RECURSAL. RECURSO CONHECIDO E NÃO PROVIDO. UNANIMIDADE.
+outputs:
+  resultado:
+    type: string
+    reference: ${normalize.output}
+nodes:
+- name: few_shot
+  use_variants: true
+- name: normalize
+  type: python
+  source:
+    type: code
+    path: normalize.py
+  inputs:
+    text: ${few_shot.output}
+node_variants:
+  few_shot:
+    default_variant_id: variant_zero_shot_0
+    variants:
+      variant_zero_shot_0:
+        node:
+          type: llm
+          source:
+            type: code
+            path: zero_shot.jinja2
+          inputs:
+            deployment_name: gpt-35-turbo-instruct
+            texto_decisao: ${inputs.texto_decisao}
+            temperature: 0.5
+          connection: openai
+          api: completion
+      variant_one_shot_1:
+        node:
+          type: llm
+          source:
+            type: code
+            path: one_shot.jinja2
+          inputs:
+            deployment_name: gpt-35-turbo-instruct
+            texto_decisao: ${inputs.texto_decisao}
+            temperature: 0.5
+          connection: openai
+          api: completion
+      variant_few_shot_1:
+        node:
+          type: llm
+          source:
+            type: code
+            path: few_shot.jinja2
+          inputs:
+            deployment_name: gpt-35-turbo-instruct
+            texto_decisao: ${inputs.texto_decisao}
+            temperature: 0.5
+          connection: openai
+          api: completion

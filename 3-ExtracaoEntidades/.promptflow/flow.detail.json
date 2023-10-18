@@ -1,0 +1,379 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "texto": "Ol\u00c3\u00a1, meu nome \u00c3\u00a9 Jo\u00c3\u00a3o da Silva, estou ligando da Mineiradora Contoso, em Vit\u00c3\u00b3ria. Estou ligando pois meu e-mail n\u00c3\u00a3o est\u00c3\u00a1 funcionando. Por favor me ligue no telefone: 011 9555-1234. "
+      },
+      "output": {
+        "assunto": "e-mail n\u00e3o est\u00e1 funcionando",
+        "empresa": "Mineiradora Contoso",
+        "localidade": "Vit\u00f3ria",
+        "nome": "Jo\u00e3o da Silva",
+        "telefone": "011 9555-1234"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc",
+      "root_run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2023-10-15T13:41:42.189490Z",
+      "end_time": "2023-10-15T13:41:43.478702Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Extraia o nome da pessoa, nome da empresa, localidade, telefone e assunto do texto abaixo e formate como JSON no seguinte formato:\n{\"nome\":\"\", \"empresa\":\"\", \"localidade\":\"\", \"telefone\":\"\", \"assunto\":\"\"}\n\nTexto:\n{{text}}\n\nResultado:\n",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "max_tokens": 100,
+            "temperature": 0.5,
+            "text": "Ol\u00c3\u00a1, meu nome \u00c3\u00a9 Jo\u00c3\u00a3o da Silva, estou ligando da Mineiradora Contoso, em Vit\u00c3\u00b3ria. Estou ligando pois meu e-mail n\u00c3\u00a3o est\u00c3\u00a1 funcionando. Por favor me ligue no telefone: 011 9555-1234. "
+          },
+          "output": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}",
+          "start_time": 1697388102.18949,
+          "end_time": 1697388103.406334,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Extraia o nome da pessoa, nome da empresa, localidade, telefone e assunto do texto abaixo e formate como JSON no seguinte formato:\n{\"nome\":\"\", \"empresa\":\"\", \"localidade\":\"\", \"telefone\":\"\", \"assunto\":\"\"}\n\nTexto:\nOl\u00c3\u00a1, meu nome \u00c3\u00a9 Jo\u00c3\u00a3o da Silva, estou ligando da Mineiradora Contoso, em Vit\u00c3\u00b3ria. Estou ligando pois meu e-mail n\u00c3\u00a3o est\u00c3\u00a1 funcionando. Por favor me ligue no telefone: 011 9555-1234. \n\nResultado:\n",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 100,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89vfC3jCRU3iTuIXw3OT3nR6ZSuvn",
+                "object": "text_completion",
+                "created": 1697377302,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 47,
+                  "prompt_tokens": 123,
+                  "total_tokens": 170
+                }
+              },
+              "start_time": 1697388102.18949,
+              "end_time": 1697388103.406334,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "extracao_entidades"
+        },
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "input1": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}"
+          },
+          "output": {
+            "nome": "Jo\u00e3o da Silva",
+            "empresa": "Mineiradora Contoso",
+            "localidade": "Vit\u00f3ria",
+            "telefone": "011 9555-1234",
+            "assunto": "e-mail n\u00e3o est\u00e1 funcionando"
+          },
+          "start_time": 1697388103.456304,
+          "end_time": 1697388103.456304,
+          "error": null,
+          "children": null,
+          "node_name": "to_dict"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 1.289212,
+        "total_tokens": 170
+      },
+      "result": {
+        "assunto": "e-mail n\u00e3o est\u00e1 funcionando",
+        "empresa": "Mineiradora Contoso",
+        "localidade": "Vit\u00f3ria",
+        "nome": "Jo\u00e3o da Silva",
+        "telefone": "011 9555-1234"
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "extracao_entidades",
+      "flow_run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc",
+      "run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc_extracao_entidades_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "Extraia o nome da pessoa, nome da empresa, localidade, telefone e assunto do texto abaixo e formate como JSON no seguinte formato:\n{\"nome\":\"\", \"empresa\":\"\", \"localidade\":\"\", \"telefone\":\"\", \"assunto\":\"\"}\n\nTexto:\n{{text}}\n\nResultado:\n",
+        "deployment_name": "gpt-35-turbo-instruct",
+        "max_tokens": 100,
+        "temperature": 0.5,
+        "text": "Ol\u00c3\u00a1, meu nome \u00c3\u00a9 Jo\u00c3\u00a3o da Silva, estou ligando da Mineiradora Contoso, em Vit\u00c3\u00b3ria. Estou ligando pois meu e-mail n\u00c3\u00a3o est\u00c3\u00a1 funcionando. Por favor me ligue no telefone: 011 9555-1234. "
+      },
+      "output": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc_0",
+      "start_time": "2023-10-15T13:41:42.189490Z",
+      "end_time": "2023-10-15T13:41:43.456304Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Extraia o nome da pessoa, nome da empresa, localidade, telefone e assunto do texto abaixo e formate como JSON no seguinte formato:\n{\"nome\":\"\", \"empresa\":\"\", \"localidade\":\"\", \"telefone\":\"\", \"assunto\":\"\"}\n\nTexto:\n{{text}}\n\nResultado:\n",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "max_tokens": 100,
+            "temperature": 0.5,
+            "text": "Ol\u00c3\u00a1, meu nome \u00c3\u00a9 Jo\u00c3\u00a3o da Silva, estou ligando da Mineiradora Contoso, em Vit\u00c3\u00b3ria. Estou ligando pois meu e-mail n\u00c3\u00a3o est\u00c3\u00a1 funcionando. Por favor me ligue no telefone: 011 9555-1234. "
+          },
+          "output": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}",
+          "start_time": 1697388102.18949,
+          "end_time": 1697388103.406334,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Extraia o nome da pessoa, nome da empresa, localidade, telefone e assunto do texto abaixo e formate como JSON no seguinte formato:\n{\"nome\":\"\", \"empresa\":\"\", \"localidade\":\"\", \"telefone\":\"\", \"assunto\":\"\"}\n\nTexto:\nOl\u00c3\u00a1, meu nome \u00c3\u00a9 Jo\u00c3\u00a3o da Silva, estou ligando da Mineiradora Contoso, em Vit\u00c3\u00b3ria. Estou ligando pois meu e-mail n\u00c3\u00a3o est\u00c3\u00a1 funcionando. Por favor me ligue no telefone: 011 9555-1234. \n\nResultado:\n",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 100,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89vfC3jCRU3iTuIXw3OT3nR6ZSuvn",
+                "object": "text_completion",
+                "created": 1697377302,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 47,
+                  "prompt_tokens": 123,
+                  "total_tokens": 170
+                }
+              },
+              "start_time": 1697388102.18949,
+              "end_time": 1697388103.406334,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "extracao_entidades"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 47,
+        "prompt_tokens": 123,
+        "total_tokens": 170,
+        "duration": 1.266814
+      },
+      "result": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}"
+    },
+    {
+      "node": "to_dict",
+      "flow_run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc",
+      "run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc_to_dict_0",
+      "status": "Completed",
+      "inputs": {
+        "input1": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}"
+      },
+      "output": {
+        "nome": "Jo\u00e3o da Silva",
+        "empresa": "Mineiradora Contoso",
+        "localidade": "Vit\u00f3ria",
+        "telefone": "011 9555-1234",
+        "assunto": "e-mail n\u00e3o est\u00e1 funcionando"
+      },
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "e874ba72-312e-4e4d-9e81-2662a276c3dc_0",
+      "start_time": "2023-10-15T13:41:43.456304Z",
+      "end_time": "2023-10-15T13:41:43.476433Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "input1": "{\"nome\":\"Jo\u00e3o da Silva\", \"empresa\":\"Mineiradora Contoso\", \"localidade\":\"Vit\u00f3ria\", \"telefone\":\"011 9555-1234\", \"assunto\":\"e-mail n\u00e3o est\u00e1 funcionando\"}"
+          },
+          "output": {
+            "nome": "Jo\u00e3o da Silva",
+            "empresa": "Mineiradora Contoso",
+            "localidade": "Vit\u00f3ria",
+            "telefone": "011 9555-1234",
+            "assunto": "e-mail n\u00e3o est\u00e1 funcionando"
+          },
+          "start_time": 1697388103.456304,
+          "end_time": 1697388103.456304,
+          "error": null,
+          "children": null,
+          "node_name": "to_dict"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.020129
+      },
+      "result": {
+        "nome": "Jo\u00e3o da Silva",
+        "empresa": "Mineiradora Contoso",
+        "localidade": "Vit\u00f3ria",
+        "telefone": "011 9555-1234",
+        "assunto": "e-mail n\u00e3o est\u00e1 funcionando"
+      }
+    }
+  ]
+}

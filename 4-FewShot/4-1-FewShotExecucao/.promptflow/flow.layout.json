@@ -1,0 +1,25 @@
+{
+  "nodeLayouts": {
+    "inputs": {
+      "x": 12,
+      "y": 62,
+      "index": -1
+    },
+    "outputs": {
+      "x": 84,
+      "y": 433,
+      "index": -1
+    },
+    "few_shot": {
+      "x": 12,
+      "y": 222,
+      "index": 0
+    },
+    "normalize": {
+      "x": 11,
+      "y": 309,
+      "index": 1
+    }
+  },
+  "orientation": "Vertical"
+}

@@ -1,0 +1,344 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+      },
+      "output": {
+        "resultado": "parcial"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a",
+      "root_run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2023-10-15T17:05:27.697790Z",
+      "end_time": "2023-10-15T17:05:28.511259Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\n\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "temperature": 0.5,
+            "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+          },
+          "output": "\nparcial",
+          "start_time": 1697400327.700763,
+          "end_time": 1697400328.457263,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\n\nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89yqOp45Mjd2wpfPdPxBlCfW1EuqE",
+                "object": "text_completion",
+                "created": 1697389528,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": "\nparcial",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 3,
+                  "prompt_tokens": 344,
+                  "total_tokens": 347
+                }
+              },
+              "start_time": 1697400327.706822,
+              "end_time": 1697400328.456278,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "few_shot"
+        },
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "text": "\nparcial"
+          },
+          "output": "parcial",
+          "start_time": 1697400328.5029,
+          "end_time": 1697400328.503921,
+          "error": null,
+          "children": null,
+          "node_name": "normalize"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 0.813469,
+        "total_tokens": 347
+      },
+      "result": {
+        "resultado": "parcial"
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "few_shot",
+      "flow_run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a",
+      "run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a_few_shot_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\n\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+        "deployment_name": "gpt-35-turbo-instruct",
+        "temperature": 0.5,
+        "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+      },
+      "output": "\nparcial",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a_0",
+      "start_time": "2023-10-15T17:05:27.699788Z",
+      "end_time": "2023-10-15T17:05:28.500457Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\n\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "temperature": 0.5,
+            "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+          },
+          "output": "\nparcial",
+          "start_time": 1697400327.700763,
+          "end_time": 1697400328.457263,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. Dever\u00c3\u00a1 retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa dever\u00c3\u00a1 retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\n\nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89yqOp45Mjd2wpfPdPxBlCfW1EuqE",
+                "object": "text_completion",
+                "created": 1697389528,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": "\nparcial",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 3,
+                  "prompt_tokens": 344,
+                  "total_tokens": 347
+                }
+              },
+              "start_time": 1697400327.706822,
+              "end_time": 1697400328.456278,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "few_shot"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 3,
+        "prompt_tokens": 344,
+        "total_tokens": 347,
+        "duration": 0.800669
+      },
+      "result": "\nparcial"
+    },
+    {
+      "node": "normalize",
+      "flow_run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a",
+      "run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a_normalize_0",
+      "status": "Completed",
+      "inputs": {
+        "text": "\nparcial"
+      },
+      "output": "parcial",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "ce0837c2-0cca-456d-b47e-8720388b4f5a_0",
+      "start_time": "2023-10-15T17:05:28.502900Z",
+      "end_time": "2023-10-15T17:05:28.509634Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "text": "\nparcial"
+          },
+          "output": "parcial",
+          "start_time": 1697400328.5029,
+          "end_time": 1697400328.503921,
+          "error": null,
+          "children": null,
+          "node_name": "normalize"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.006734
+      },
+      "result": "parcial"
+    }
+  ]
+}

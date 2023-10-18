@@ -1,0 +1,361 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "topic": "dictatorship"
+      },
+      "output": {
+        "joke": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e",
+      "root_run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e",
+      "source_run_id": null,
+      "flow_id": "template_standard_flow",
+      "start_time": "2023-10-15T12:55:18.038888Z",
+      "end_time": "2023-10-15T12:55:19.389903Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "{# Prompt is a jinja2 template that generates prompt for LLM #}\n\nsystem:\n\nYou are a bot can tell good jokes\n\nuser:\n\nA joke about {{topic}} please",
+            "deployment_name": "gpt-35-turbo",
+            "max_tokens": 256,
+            "temperature": 1.0,
+            "topic": "dictatorship"
+          },
+          "output": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown.",
+          "start_time": 1697385318.038888,
+          "end_time": 1697385319.325937,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "type": "LLM",
+              "inputs": {
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview",
+                "engine": "gpt-35-turbo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a bot can tell good jokes"
+                  },
+                  {
+                    "role": "user",
+                    "content": "A joke about dictatorship please"
+                  }
+                ],
+                "temperature": 1.0,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "stop": null,
+                "max_tokens": 256,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "logit_bias": {},
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-89uwIWuO82rXQgkZTPQ33hqaeiAJp",
+                "object": "chat.completion",
+                "created": 1697374518,
+                "model": "gpt-35-turbo",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "message": {
+                      "role": "assistant",
+                      "content": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "low"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 24,
+                  "completion_tokens": 26,
+                  "total_tokens": 50
+                }
+              },
+              "start_time": 1697385318.05452,
+              "end_time": 1697385319.325937,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "joke"
+        },
+        {
+          "name": "echo",
+          "type": "Tool",
+          "inputs": {
+            "input": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+          },
+          "output": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown.",
+          "start_time": 1697385319.37279,
+          "end_time": 1697385319.37279,
+          "error": null,
+          "children": null,
+          "node_name": "echo"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 1.351015,
+        "total_tokens": 50
+      },
+      "result": {
+        "joke": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "joke",
+      "flow_run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e",
+      "run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e_joke_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "{# Prompt is a jinja2 template that generates prompt for LLM #}\n\nsystem:\n\nYou are a bot can tell good jokes\n\nuser:\n\nA joke about {{topic}} please",
+        "deployment_name": "gpt-35-turbo",
+        "max_tokens": 256,
+        "temperature": 1.0,
+        "topic": "dictatorship"
+      },
+      "output": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown.",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e_0",
+      "start_time": "2023-10-15T12:55:18.038888Z",
+      "end_time": "2023-10-15T12:55:19.372790Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "{# Prompt is a jinja2 template that generates prompt for LLM #}\n\nsystem:\n\nYou are a bot can tell good jokes\n\nuser:\n\nA joke about {{topic}} please",
+            "deployment_name": "gpt-35-turbo",
+            "max_tokens": 256,
+            "temperature": 1.0,
+            "topic": "dictatorship"
+          },
+          "output": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown.",
+          "start_time": 1697385318.038888,
+          "end_time": 1697385319.325937,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.chat_completion.ChatCompletion.create",
+              "type": "LLM",
+              "inputs": {
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview",
+                "engine": "gpt-35-turbo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a bot can tell good jokes"
+                  },
+                  {
+                    "role": "user",
+                    "content": "A joke about dictatorship please"
+                  }
+                ],
+                "temperature": 1.0,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "stop": null,
+                "max_tokens": 256,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "logit_bias": {},
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-89uwIWuO82rXQgkZTPQ33hqaeiAJp",
+                "object": "chat.completion",
+                "created": 1697374518,
+                "model": "gpt-35-turbo",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "message": {
+                      "role": "assistant",
+                      "content": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "low"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 24,
+                  "completion_tokens": 26,
+                  "total_tokens": 50
+                }
+              },
+              "start_time": 1697385318.05452,
+              "end_time": 1697385319.325937,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "joke"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "prompt_tokens": 24,
+        "completion_tokens": 26,
+        "total_tokens": 50,
+        "duration": 1.333902
+      },
+      "result": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+    },
+    {
+      "node": "echo",
+      "flow_run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e",
+      "run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e_echo_0",
+      "status": "Completed",
+      "inputs": {
+        "input": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+      },
+      "output": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown.",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "41e1689d-6f4f-4eff-afdf-05a00459009e_0",
+      "start_time": "2023-10-15T12:55:19.372790Z",
+      "end_time": "2023-10-15T12:55:19.372790Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "echo",
+          "type": "Tool",
+          "inputs": {
+            "input": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+          },
+          "output": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown.",
+          "start_time": 1697385319.37279,
+          "end_time": 1697385319.37279,
+          "error": null,
+          "children": null,
+          "node_name": "echo"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.0
+      },
+      "result": "Why don't dictators like playing cards?\n\nBecause they can never find someone to shuffle and deal for them without getting overthrown."
+    }
+  ]
+}

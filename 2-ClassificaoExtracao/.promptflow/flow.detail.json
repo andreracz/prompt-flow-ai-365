@@ -1,0 +1,365 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "4bc3932d-6797-4309-931e-862c40354756_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "texto": "Estamos com TODOS os usu\u00c3\u00a1rios da empresa sem acesso ao e-mail, as senhas n\u00c3\u00a3o est\u00c3\u00a3o funcionando. Precisamos de ajuda imediata!",
+        "titulo": "Todos os usu\u00c3\u00a1rios sem acesso"
+      },
+      "output": {
+        "fila": "E-mail",
+        "severidade": "Alta"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "4bc3932d-6797-4309-931e-862c40354756",
+      "root_run_id": "4bc3932d-6797-4309-931e-862c40354756",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2023-10-15T13:34:06.338618Z",
+      "end_time": "2023-10-15T13:34:07.241869Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Para o texto abaixo, d\u00c3\u00aa uma classifica\u00c3\u00a7\u00c3\u00a3os, das seguintes categorias:\n- Fila de Atendimento: \"Office\", \"E-mail\", \"Active Directory\", \"Sharepoint\"\n- Severidade: \"Alta\", \"M\u00c3\u00a9dia\", \"Baixa\"\nGere o resultado em formato JSON: {% raw %}{ \"fila\": \"XXX\", \"severidade\": \"XXX\"\\}{% endraw %}\n\nT\u00c3\u00adtulo: {{titulo}}\n{{texto}}\n\nResposta:",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "max_tokens": 30,
+            "temperature": 0.5,
+            "texto": "Estamos com TODOS os usu\u00c3\u00a1rios da empresa sem acesso ao e-mail, as senhas n\u00c3\u00a3o est\u00c3\u00a3o funcionando. Precisamos de ajuda imediata!",
+            "titulo": "Todos os usu\u00c3\u00a1rios sem acesso"
+          },
+          "output": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}",
+          "start_time": 1697387646.338618,
+          "end_time": 1697387647.180374,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Para o texto abaixo, d\u00c3\u00aa uma classifica\u00c3\u00a7\u00c3\u00a3os, das seguintes categorias:\n- Fila de Atendimento: \"Office\", \"E-mail\", \"Active Directory\", \"Sharepoint\"\n- Severidade: \"Alta\", \"M\u00c3\u00a9dia\", \"Baixa\"\nGere o resultado em formato JSON: { \"fila\": \"XXX\", \"severidade\": \"XXX\"\\}\nT\u00c3\u00adtulo: Todos os usu\u00c3\u00a1rios sem acesso\nEstamos com TODOS os usu\u00c3\u00a1rios da empresa sem acesso ao e-mail, as senhas n\u00c3\u00a3o est\u00c3\u00a3o funcionando. Precisamos de ajuda imediata!\n\nResposta:",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 30,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89vXqD4onCO6xojDHxASrt0H82hum",
+                "object": "text_completion",
+                "created": 1697376846,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 16,
+                  "prompt_tokens": 143,
+                  "total_tokens": 159
+                }
+              },
+              "start_time": 1697387646.338618,
+              "end_time": 1697387647.180374,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "classificacao_extracao"
+        },
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "input1": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}"
+          },
+          "output": {
+            "fila": "E-mail",
+            "severidade": "Alta"
+          },
+          "start_time": 1697387647.231684,
+          "end_time": 1697387647.234157,
+          "error": null,
+          "children": null,
+          "node_name": "to_dict"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 0.903251,
+        "total_tokens": 159
+      },
+      "result": {
+        "fila": "E-mail",
+        "severidade": "Alta"
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "classificacao_extracao",
+      "flow_run_id": "4bc3932d-6797-4309-931e-862c40354756",
+      "run_id": "4bc3932d-6797-4309-931e-862c40354756_classificacao_extracao_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "Para o texto abaixo, d\u00c3\u00aa uma classifica\u00c3\u00a7\u00c3\u00a3os, das seguintes categorias:\n- Fila de Atendimento: \"Office\", \"E-mail\", \"Active Directory\", \"Sharepoint\"\n- Severidade: \"Alta\", \"M\u00c3\u00a9dia\", \"Baixa\"\nGere o resultado em formato JSON: {% raw %}{ \"fila\": \"XXX\", \"severidade\": \"XXX\"\\}{% endraw %}\n\nT\u00c3\u00adtulo: {{titulo}}\n{{texto}}\n\nResposta:",
+        "deployment_name": "gpt-35-turbo-instruct",
+        "max_tokens": 30,
+        "temperature": 0.5,
+        "texto": "Estamos com TODOS os usu\u00c3\u00a1rios da empresa sem acesso ao e-mail, as senhas n\u00c3\u00a3o est\u00c3\u00a3o funcionando. Precisamos de ajuda imediata!",
+        "titulo": "Todos os usu\u00c3\u00a1rios sem acesso"
+      },
+      "output": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "4bc3932d-6797-4309-931e-862c40354756_0",
+      "start_time": "2023-10-15T13:34:06.338618Z",
+      "end_time": "2023-10-15T13:34:07.229706Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Para o texto abaixo, d\u00c3\u00aa uma classifica\u00c3\u00a7\u00c3\u00a3os, das seguintes categorias:\n- Fila de Atendimento: \"Office\", \"E-mail\", \"Active Directory\", \"Sharepoint\"\n- Severidade: \"Alta\", \"M\u00c3\u00a9dia\", \"Baixa\"\nGere o resultado em formato JSON: {% raw %}{ \"fila\": \"XXX\", \"severidade\": \"XXX\"\\}{% endraw %}\n\nT\u00c3\u00adtulo: {{titulo}}\n{{texto}}\n\nResposta:",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "max_tokens": 30,
+            "temperature": 0.5,
+            "texto": "Estamos com TODOS os usu\u00c3\u00a1rios da empresa sem acesso ao e-mail, as senhas n\u00c3\u00a3o est\u00c3\u00a3o funcionando. Precisamos de ajuda imediata!",
+            "titulo": "Todos os usu\u00c3\u00a1rios sem acesso"
+          },
+          "output": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}",
+          "start_time": 1697387646.338618,
+          "end_time": 1697387647.180374,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Para o texto abaixo, d\u00c3\u00aa uma classifica\u00c3\u00a7\u00c3\u00a3os, das seguintes categorias:\n- Fila de Atendimento: \"Office\", \"E-mail\", \"Active Directory\", \"Sharepoint\"\n- Severidade: \"Alta\", \"M\u00c3\u00a9dia\", \"Baixa\"\nGere o resultado em formato JSON: { \"fila\": \"XXX\", \"severidade\": \"XXX\"\\}\nT\u00c3\u00adtulo: Todos os usu\u00c3\u00a1rios sem acesso\nEstamos com TODOS os usu\u00c3\u00a1rios da empresa sem acesso ao e-mail, as senhas n\u00c3\u00a3o est\u00c3\u00a3o funcionando. Precisamos de ajuda imediata!\n\nResposta:",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 30,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89vXqD4onCO6xojDHxASrt0H82hum",
+                "object": "text_completion",
+                "created": 1697376846,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 16,
+                  "prompt_tokens": 143,
+                  "total_tokens": 159
+                }
+              },
+              "start_time": 1697387646.338618,
+              "end_time": 1697387647.180374,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "classificacao_extracao"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 16,
+        "prompt_tokens": 143,
+        "total_tokens": 159,
+        "duration": 0.891088
+      },
+      "result": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}"
+    },
+    {
+      "node": "to_dict",
+      "flow_run_id": "4bc3932d-6797-4309-931e-862c40354756",
+      "run_id": "4bc3932d-6797-4309-931e-862c40354756_to_dict_0",
+      "status": "Completed",
+      "inputs": {
+        "input1": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}"
+      },
+      "output": {
+        "fila": "E-mail",
+        "severidade": "Alta"
+      },
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "4bc3932d-6797-4309-931e-862c40354756_0",
+      "start_time": "2023-10-15T13:34:07.231684Z",
+      "end_time": "2023-10-15T13:34:07.239156Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "input1": " {\"fila\": \"E-mail\", \"severidade\": \"Alta\"}"
+          },
+          "output": {
+            "fila": "E-mail",
+            "severidade": "Alta"
+          },
+          "start_time": 1697387647.231684,
+          "end_time": 1697387647.234157,
+          "error": null,
+          "children": null,
+          "node_name": "to_dict"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.007472
+      },
+      "result": {
+        "fila": "E-mail",
+        "severidade": "Alta"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "package": {},
+  "code": {
+    "AnaliseSentimentos.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "AnaliseSentimentos.jinja2"
+    },
+    "AnaliseSentimentos_variant_1.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "AnaliseSentimentos_variant_1.jinja2"
+    }
+  }
+}

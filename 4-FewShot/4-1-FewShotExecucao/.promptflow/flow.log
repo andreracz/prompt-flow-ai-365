@@ -1,0 +1,5 @@
+2023-10-15 14:05:47 -0300    5416 execution          INFO     Start to run 2 nodes with concurrency level 16.
+2023-10-15 14:05:47 -0300    5416 execution.flow     INFO     Executing node few_shot. node run id: fc229b60-220c-4235-a3b4-a170a1ff082f_few_shot_0
+2023-10-15 14:05:48 -0300    5416 execution.flow     INFO     Node few_shot completes.
+2023-10-15 14:05:48 -0300    5416 execution.flow     INFO     Executing node normalize. node run id: fc229b60-220c-4235-a3b4-a170a1ff082f_normalize_0
+2023-10-15 14:05:48 -0300    5416 execution.flow     INFO     Node normalize completes.

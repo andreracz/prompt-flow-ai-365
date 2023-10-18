@@ -1,0 +1,25 @@
+{
+  "nodeLayouts": {
+    "inputs": {
+      "x": 12,
+      "y": 62,
+      "index": -1
+    },
+    "outputs": {
+      "x": 66,
+      "y": 523,
+      "index": -1
+    },
+    "classificacao_extracao": {
+      "x": 12,
+      "y": 222,
+      "index": 0
+    },
+    "to_dict": {
+      "x": 19,
+      "y": 370,
+      "index": 1
+    }
+  },
+  "orientation": "Vertical"
+}

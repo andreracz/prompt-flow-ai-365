@@ -1,0 +1,5 @@
+2023-10-15 10:41:42 -0300   27212 execution          INFO     Start to run 2 nodes with concurrency level 16.
+2023-10-15 10:41:42 -0300   27212 execution.flow     INFO     Executing node extracao_entidades. node run id: e874ba72-312e-4e4d-9e81-2662a276c3dc_extracao_entidades_0
+2023-10-15 10:41:43 -0300   27212 execution.flow     INFO     Node extracao_entidades completes.
+2023-10-15 10:41:43 -0300   27212 execution.flow     INFO     Executing node to_dict. node run id: e874ba72-312e-4e4d-9e81-2662a276c3dc_to_dict_0
+2023-10-15 10:41:43 -0300   27212 execution.flow     INFO     Node to_dict completes.

@@ -1,0 +1,33 @@
+{
+  "package": {},
+  "code": {
+    "classificacao_extracao.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "texto": {
+          "type": [
+            "string"
+          ]
+        },
+        "titulo": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "classificacao_extracao.jinja2"
+    },
+    "to_dict.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "to_dict.py",
+      "function": "my_python_tool"
+    }
+  }
+}

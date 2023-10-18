@@ -1,0 +1,7 @@
+tests:
+  - name: 1-AnaliseSentimentos_default_20231015_101450_285000
+    display_name: 1-AnaliseSentimentos
+    flow: c:\dev\techbeer\prompt-flow-ai-365\1-AnaliseSentimentos
+    data: c:\dev\techbeer\prompt-flow-ai-365\1-AnaliseSentimentos\frases.jsonl
+    column_mapping:
+      frase: ${data.frase}

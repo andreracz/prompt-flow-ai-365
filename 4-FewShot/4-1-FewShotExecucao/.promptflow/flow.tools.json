@@ -1,0 +1,50 @@
+{
+  "package": {},
+  "code": {
+    "normalize.py": {
+      "type": "python",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "normalize.py",
+      "function": "my_python_tool"
+    },
+    "few_shot.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "texto_decisao": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "few_shot.jinja2"
+    },
+    "zero_shot.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "texto_decisao": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "zero_shot.jinja2"
+    },
+    "one_shot.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "texto_decisao": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "one_shot.jinja2"
+    }
+  }
+}

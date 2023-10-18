@@ -1,0 +1,28 @@
+{
+  "package": {},
+  "code": {
+    "extracao_entidades.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "text": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "extracao_entidades.jinja2"
+    },
+    "to_dict.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "to_dict.py",
+      "function": "my_python_tool"
+    }
+  }
+}

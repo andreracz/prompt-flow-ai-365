@@ -1,0 +1,5 @@
+2023-10-15 09:55:18 -0300    1248 execution          INFO     Start to run 2 nodes with concurrency level 16.
+2023-10-15 09:55:18 -0300    1248 execution.flow     INFO     Executing node joke. node run id: 41e1689d-6f4f-4eff-afdf-05a00459009e_joke_0
+2023-10-15 09:55:19 -0300    1248 execution.flow     INFO     Node joke completes.
+2023-10-15 09:55:19 -0300    1248 execution.flow     INFO     Executing node echo. node run id: 41e1689d-6f4f-4eff-afdf-05a00459009e_echo_0
+2023-10-15 09:55:19 -0300    1248 execution.flow     INFO     Node echo completes.

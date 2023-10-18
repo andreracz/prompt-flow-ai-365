@@ -1,0 +1,344 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+      },
+      "output": {
+        "resultado": "acatada"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f",
+      "root_run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2023-10-15T17:05:47.966454Z",
+      "end_time": "2023-10-15T17:05:48.805268Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. DeverA retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa deverA retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n--- \nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O DE OBRIGA\u00c3\u2021\u00c3\u0192O DE FAZER, COM NULIDADE CONTRATUAL, PEDIDO DE TUTELA DE URGENCIA E DANOS MORAIS. DIREITO A SAUDE. NEGATIVA DE CUSTEIO DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA DE RECUPERA\u00c3\u2021\u00c3\u0192O DE DEPENDENCIA QUIMICA. CLAUSULA DE COPARTICIPA\u00c3\u2021\u00c3\u0192O. POSSIBILIDADE, DESDE QUE RESGUARDADO O DEVER DE INFORMA\u00c3\u2021\u00c3\u0192O DO CONSUMIDOR. CLAUSULA SEM DESTAQUE. NULA. ALEGA\u00c3\u2021\u00c3\u0192O DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA N\u00c3\u0192O CREDENCIADA PELO PLANO. TRANSFERENCIA PARA CLINICA CONVENIADA AO PLANO. ALEGA\u00c3\u2021\u00c3\u0192O DE INAPLICABILIDADE DE SUMULA 302 DO STJ. ACOLHIDO. RECURSO DE APELA\u00c3\u2021\u00c3\u0192O CONHECIDO E PARCIALMENTE PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:parcial\n---\nTexto da decis\u00c3\u00a3o:\nPENAL. PROCESSO PENAL. APELA\u00c3\u2021\u00c3\u0192O CRIMINAL. ROUBO CONSUMADO E TENTATIVA DE ROUBO. CONDENA\u00c3\u2021\u00c3\u0192O. DOSIMETRIA DA PENA. PLEITO DE APLICA\u00c3\u2021\u00c3\u0192O DA REGRA DO CUMULO MATERIAL BENEFICO, EM DETRIMENTO DO SISTEMA DE CALCULO DO CRIME CONTINUADO. ACOLHIMENTO. SOMA DAS PENAS QUE SE REVELA MAIS FAVORAVEL AO R\u00c3\u2030U QUE A EXASPERA\u00c3\u2021\u00c3\u0192O. REPRIMENDAS PRIVATIVA DE LIBERDADE E DE MULTA REDIMENSIONADAS DE ACORDO COM AS BALIZAS LEGAIS ABSTRATAS. RECURSO CONHECIDO E PROVIDO. I Procedendo-se ao cAlculo isolado das penalidades correspondentes aos delitos de roubo consumado e de tentativa de roubo, constata-se que o sistema do c\u00c3\u00bamulo material ben\u00c3\u00a9fico, no qual se somam as reprimendas individuais, mostra-se mais favorAvel ao r\u00c3\u00a9u, motivo pelo qual deve ser aplicado em seu favor, em detrimento da regra de exaspera\u00c3\u00a7\u00c3\u00a3o do crime continuado. II Na terceira etapa da dosimetria do delito de roubo tentado deve ser aplicada a causa de diminui\u00c3\u00a7\u00c3\u00a3o de pena prevista no art. 14, II do CP em sua fra\u00c3\u00a7\u00c3\u00a3o mAxima de 2\\/3, na medida em que o agente pouco se aproximou da efetiva subtra\u00c3\u00a7\u00c3\u00a3o do bem da vItima, que foi avisada de que o r\u00c3\u00a9u n\u00c3\u00a3o estava armado e se negou a entregar seus pertences. III- Penalidades privativa de liberdade e de multa redimensionadas de acordo com as balizas legais abstratas. IV - Recurso conhecido e provido.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:acatada\n---\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "temperature": 0.5,
+            "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+          },
+          "output": " acatada",
+          "start_time": 1697400347.968456,
+          "end_time": 1697400348.749577,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. DeverA retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa deverA retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n--- \nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O DE OBRIGA\u00c3\u2021\u00c3\u0192O DE FAZER, COM NULIDADE CONTRATUAL, PEDIDO DE TUTELA DE URGENCIA E DANOS MORAIS. DIREITO A SAUDE. NEGATIVA DE CUSTEIO DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA DE RECUPERA\u00c3\u2021\u00c3\u0192O DE DEPENDENCIA QUIMICA. CLAUSULA DE COPARTICIPA\u00c3\u2021\u00c3\u0192O. POSSIBILIDADE, DESDE QUE RESGUARDADO O DEVER DE INFORMA\u00c3\u2021\u00c3\u0192O DO CONSUMIDOR. CLAUSULA SEM DESTAQUE. NULA. ALEGA\u00c3\u2021\u00c3\u0192O DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA N\u00c3\u0192O CREDENCIADA PELO PLANO. TRANSFERENCIA PARA CLINICA CONVENIADA AO PLANO. ALEGA\u00c3\u2021\u00c3\u0192O DE INAPLICABILIDADE DE SUMULA 302 DO STJ. ACOLHIDO. RECURSO DE APELA\u00c3\u2021\u00c3\u0192O CONHECIDO E PARCIALMENTE PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:parcial\n---\nTexto da decis\u00c3\u00a3o:\nPENAL. PROCESSO PENAL. APELA\u00c3\u2021\u00c3\u0192O CRIMINAL. ROUBO CONSUMADO E TENTATIVA DE ROUBO. CONDENA\u00c3\u2021\u00c3\u0192O. DOSIMETRIA DA PENA. PLEITO DE APLICA\u00c3\u2021\u00c3\u0192O DA REGRA DO CUMULO MATERIAL BENEFICO, EM DETRIMENTO DO SISTEMA DE CALCULO DO CRIME CONTINUADO. ACOLHIMENTO. SOMA DAS PENAS QUE SE REVELA MAIS FAVORAVEL AO R\u00c3\u2030U QUE A EXASPERA\u00c3\u2021\u00c3\u0192O. REPRIMENDAS PRIVATIVA DE LIBERDADE E DE MULTA REDIMENSIONADAS DE ACORDO COM AS BALIZAS LEGAIS ABSTRATAS. RECURSO CONHECIDO E PROVIDO. I Procedendo-se ao cAlculo isolado das penalidades correspondentes aos delitos de roubo consumado e de tentativa de roubo, constata-se que o sistema do c\u00c3\u00bamulo material ben\u00c3\u00a9fico, no qual se somam as reprimendas individuais, mostra-se mais favorAvel ao r\u00c3\u00a9u, motivo pelo qual deve ser aplicado em seu favor, em detrimento da regra de exaspera\u00c3\u00a7\u00c3\u00a3o do crime continuado. II Na terceira etapa da dosimetria do delito de roubo tentado deve ser aplicada a causa de diminui\u00c3\u00a7\u00c3\u00a3o de pena prevista no art. 14, II do CP em sua fra\u00c3\u00a7\u00c3\u00a3o mAxima de 2\\/3, na medida em que o agente pouco se aproximou da efetiva subtra\u00c3\u00a7\u00c3\u00a3o do bem da vItima, que foi avisada de que o r\u00c3\u00a9u n\u00c3\u00a3o estava armado e se negou a entregar seus pertences. III- Penalidades privativa de liberdade e de multa redimensionadas de acordo com as balizas legais abstratas. IV - Recurso conhecido e provido.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:acatada\n---\nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89yqi58F20kv7szbIqOxxG4g0f3gG",
+                "object": "text_completion",
+                "created": 1697389548,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": " acatada",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 3,
+                  "prompt_tokens": 1365,
+                  "total_tokens": 1368
+                }
+              },
+              "start_time": 1697400347.972448,
+              "end_time": 1697400348.749577,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "few_shot"
+        },
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "text": " acatada"
+          },
+          "output": "acatada",
+          "start_time": 1697400348.794777,
+          "end_time": 1697400348.79826,
+          "error": null,
+          "children": null,
+          "node_name": "normalize"
+        }
+      ],
+      "variant_id": "",
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 0.838814,
+        "total_tokens": 1368
+      },
+      "result": {
+        "resultado": "acatada"
+      },
+      "upload_metrics": false
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "few_shot",
+      "flow_run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f",
+      "run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f_few_shot_0",
+      "status": "Completed",
+      "inputs": {
+        "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. DeverA retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa deverA retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n--- \nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O DE OBRIGA\u00c3\u2021\u00c3\u0192O DE FAZER, COM NULIDADE CONTRATUAL, PEDIDO DE TUTELA DE URGENCIA E DANOS MORAIS. DIREITO A SAUDE. NEGATIVA DE CUSTEIO DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA DE RECUPERA\u00c3\u2021\u00c3\u0192O DE DEPENDENCIA QUIMICA. CLAUSULA DE COPARTICIPA\u00c3\u2021\u00c3\u0192O. POSSIBILIDADE, DESDE QUE RESGUARDADO O DEVER DE INFORMA\u00c3\u2021\u00c3\u0192O DO CONSUMIDOR. CLAUSULA SEM DESTAQUE. NULA. ALEGA\u00c3\u2021\u00c3\u0192O DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA N\u00c3\u0192O CREDENCIADA PELO PLANO. TRANSFERENCIA PARA CLINICA CONVENIADA AO PLANO. ALEGA\u00c3\u2021\u00c3\u0192O DE INAPLICABILIDADE DE SUMULA 302 DO STJ. ACOLHIDO. RECURSO DE APELA\u00c3\u2021\u00c3\u0192O CONHECIDO E PARCIALMENTE PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:parcial\n---\nTexto da decis\u00c3\u00a3o:\nPENAL. PROCESSO PENAL. APELA\u00c3\u2021\u00c3\u0192O CRIMINAL. ROUBO CONSUMADO E TENTATIVA DE ROUBO. CONDENA\u00c3\u2021\u00c3\u0192O. DOSIMETRIA DA PENA. PLEITO DE APLICA\u00c3\u2021\u00c3\u0192O DA REGRA DO CUMULO MATERIAL BENEFICO, EM DETRIMENTO DO SISTEMA DE CALCULO DO CRIME CONTINUADO. ACOLHIMENTO. SOMA DAS PENAS QUE SE REVELA MAIS FAVORAVEL AO R\u00c3\u2030U QUE A EXASPERA\u00c3\u2021\u00c3\u0192O. REPRIMENDAS PRIVATIVA DE LIBERDADE E DE MULTA REDIMENSIONADAS DE ACORDO COM AS BALIZAS LEGAIS ABSTRATAS. RECURSO CONHECIDO E PROVIDO. I Procedendo-se ao cAlculo isolado das penalidades correspondentes aos delitos de roubo consumado e de tentativa de roubo, constata-se que o sistema do c\u00c3\u00bamulo material ben\u00c3\u00a9fico, no qual se somam as reprimendas individuais, mostra-se mais favorAvel ao r\u00c3\u00a9u, motivo pelo qual deve ser aplicado em seu favor, em detrimento da regra de exaspera\u00c3\u00a7\u00c3\u00a3o do crime continuado. II Na terceira etapa da dosimetria do delito de roubo tentado deve ser aplicada a causa de diminui\u00c3\u00a7\u00c3\u00a3o de pena prevista no art. 14, II do CP em sua fra\u00c3\u00a7\u00c3\u00a3o mAxima de 2\\/3, na medida em que o agente pouco se aproximou da efetiva subtra\u00c3\u00a7\u00c3\u00a3o do bem da vItima, que foi avisada de que o r\u00c3\u00a9u n\u00c3\u00a3o estava armado e se negou a entregar seus pertences. III- Penalidades privativa de liberdade e de multa redimensionadas de acordo com as balizas legais abstratas. IV - Recurso conhecido e provido.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:acatada\n---\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+        "deployment_name": "gpt-35-turbo-instruct",
+        "temperature": 0.5,
+        "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+      },
+      "output": " acatada",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f_0",
+      "start_time": "2023-10-15T17:05:47.968456Z",
+      "end_time": "2023-10-15T17:05:48.793421Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.completion",
+          "type": "Tool",
+          "inputs": {
+            "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. DeverA retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa deverA retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n--- \nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O DE OBRIGA\u00c3\u2021\u00c3\u0192O DE FAZER, COM NULIDADE CONTRATUAL, PEDIDO DE TUTELA DE URGENCIA E DANOS MORAIS. DIREITO A SAUDE. NEGATIVA DE CUSTEIO DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA DE RECUPERA\u00c3\u2021\u00c3\u0192O DE DEPENDENCIA QUIMICA. CLAUSULA DE COPARTICIPA\u00c3\u2021\u00c3\u0192O. POSSIBILIDADE, DESDE QUE RESGUARDADO O DEVER DE INFORMA\u00c3\u2021\u00c3\u0192O DO CONSUMIDOR. CLAUSULA SEM DESTAQUE. NULA. ALEGA\u00c3\u2021\u00c3\u0192O DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA N\u00c3\u0192O CREDENCIADA PELO PLANO. TRANSFERENCIA PARA CLINICA CONVENIADA AO PLANO. ALEGA\u00c3\u2021\u00c3\u0192O DE INAPLICABILIDADE DE SUMULA 302 DO STJ. ACOLHIDO. RECURSO DE APELA\u00c3\u2021\u00c3\u0192O CONHECIDO E PARCIALMENTE PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:parcial\n---\nTexto da decis\u00c3\u00a3o:\nPENAL. PROCESSO PENAL. APELA\u00c3\u2021\u00c3\u0192O CRIMINAL. ROUBO CONSUMADO E TENTATIVA DE ROUBO. CONDENA\u00c3\u2021\u00c3\u0192O. DOSIMETRIA DA PENA. PLEITO DE APLICA\u00c3\u2021\u00c3\u0192O DA REGRA DO CUMULO MATERIAL BENEFICO, EM DETRIMENTO DO SISTEMA DE CALCULO DO CRIME CONTINUADO. ACOLHIMENTO. SOMA DAS PENAS QUE SE REVELA MAIS FAVORAVEL AO R\u00c3\u2030U QUE A EXASPERA\u00c3\u2021\u00c3\u0192O. REPRIMENDAS PRIVATIVA DE LIBERDADE E DE MULTA REDIMENSIONADAS DE ACORDO COM AS BALIZAS LEGAIS ABSTRATAS. RECURSO CONHECIDO E PROVIDO. I Procedendo-se ao cAlculo isolado das penalidades correspondentes aos delitos de roubo consumado e de tentativa de roubo, constata-se que o sistema do c\u00c3\u00bamulo material ben\u00c3\u00a9fico, no qual se somam as reprimendas individuais, mostra-se mais favorAvel ao r\u00c3\u00a9u, motivo pelo qual deve ser aplicado em seu favor, em detrimento da regra de exaspera\u00c3\u00a7\u00c3\u00a3o do crime continuado. II Na terceira etapa da dosimetria do delito de roubo tentado deve ser aplicada a causa de diminui\u00c3\u00a7\u00c3\u00a3o de pena prevista no art. 14, II do CP em sua fra\u00c3\u00a7\u00c3\u00a3o mAxima de 2\\/3, na medida em que o agente pouco se aproximou da efetiva subtra\u00c3\u00a7\u00c3\u00a3o do bem da vItima, que foi avisada de que o r\u00c3\u00a9u n\u00c3\u00a3o estava armado e se negou a entregar seus pertences. III- Penalidades privativa de liberdade e de multa redimensionadas de acordo com as balizas legais abstratas. IV - Recurso conhecido e provido.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:acatada\n---\nTexto da decis\u00c3\u00a3o:\n{{texto_decisao}}\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+            "deployment_name": "gpt-35-turbo-instruct",
+            "temperature": 0.5,
+            "texto_decisao": "APELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE."
+          },
+          "output": " acatada",
+          "start_time": 1697400347.968456,
+          "end_time": 1697400348.749577,
+          "error": null,
+          "children": [
+            {
+              "name": "openai.api_resources.completion.Completion.create",
+              "type": "LLM",
+              "inputs": {
+                "prompt": "Voc\u00c3\u00aa \u00c3\u00a9 um avaliador de decis\u00c3\u00b5es judiciais. DeverA retornar se a decis\u00c3\u00a3o foi acatada total, parcialmente ou n\u00c3\u00a3o acatada.\nVoc\u00c3\u00aa deverA retornar um destes valores: acatada, parcial, n\u00c3\u00a3o acatada\nExemplos:\nTexto da decis\u00c3\u00a3o:\nEMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM EMBARGOS DE DECLARA\u00c3\u2021\u00c3\u0192O EM AGRAVO DE INSTRUMENTO. ALEGA\u00c3\u2021\u00c3\u0192O DE OMISS\u00c3\u0192O N\u00c3\u0192O ACOLHIDA. TENTATIVA DE REDISCUSS\u00c3\u0192O DA MAT\u00c3\u2030RIA POR MEIO DOS ACLARAT\u00c3\u201cRIOS. VIA INADEQUADA, FIM DIVERSO DAS HIP\u00c3\u201cTESES PREVISTAS NO ARTIGO 1.022, DO CPC 2015. PREQUESTIONAMENTO INCABIVEL QUANDO N\u00c3\u0192O CONFIGURADO QUAISQUER DOS VICIOS PREVISTOS NO REFERIDO ARTIGO. AC\u00c3\u201cRD\u00c3\u0192O MANTIDO NA INTEGRA. RECURSO CONHECIDO E REJEITADO. DECIS\u00c3\u0192O UN\u00c3\u201aNIME.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:n\u00c3\u00a3o acatada\n--- \nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O DE OBRIGA\u00c3\u2021\u00c3\u0192O DE FAZER, COM NULIDADE CONTRATUAL, PEDIDO DE TUTELA DE URGENCIA E DANOS MORAIS. DIREITO A SAUDE. NEGATIVA DE CUSTEIO DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA DE RECUPERA\u00c3\u2021\u00c3\u0192O DE DEPENDENCIA QUIMICA. CLAUSULA DE COPARTICIPA\u00c3\u2021\u00c3\u0192O. POSSIBILIDADE, DESDE QUE RESGUARDADO O DEVER DE INFORMA\u00c3\u2021\u00c3\u0192O DO CONSUMIDOR. CLAUSULA SEM DESTAQUE. NULA. ALEGA\u00c3\u2021\u00c3\u0192O DE INTERNA\u00c3\u2021\u00c3\u0192O EM CLINICA N\u00c3\u0192O CREDENCIADA PELO PLANO. TRANSFERENCIA PARA CLINICA CONVENIADA AO PLANO. ALEGA\u00c3\u2021\u00c3\u0192O DE INAPLICABILIDADE DE SUMULA 302 DO STJ. ACOLHIDO. RECURSO DE APELA\u00c3\u2021\u00c3\u0192O CONHECIDO E PARCIALMENTE PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:parcial\n---\nTexto da decis\u00c3\u00a3o:\nPENAL. PROCESSO PENAL. APELA\u00c3\u2021\u00c3\u0192O CRIMINAL. ROUBO CONSUMADO E TENTATIVA DE ROUBO. CONDENA\u00c3\u2021\u00c3\u0192O. DOSIMETRIA DA PENA. PLEITO DE APLICA\u00c3\u2021\u00c3\u0192O DA REGRA DO CUMULO MATERIAL BENEFICO, EM DETRIMENTO DO SISTEMA DE CALCULO DO CRIME CONTINUADO. ACOLHIMENTO. SOMA DAS PENAS QUE SE REVELA MAIS FAVORAVEL AO R\u00c3\u2030U QUE A EXASPERA\u00c3\u2021\u00c3\u0192O. REPRIMENDAS PRIVATIVA DE LIBERDADE E DE MULTA REDIMENSIONADAS DE ACORDO COM AS BALIZAS LEGAIS ABSTRATAS. RECURSO CONHECIDO E PROVIDO. I Procedendo-se ao cAlculo isolado das penalidades correspondentes aos delitos de roubo consumado e de tentativa de roubo, constata-se que o sistema do c\u00c3\u00bamulo material ben\u00c3\u00a9fico, no qual se somam as reprimendas individuais, mostra-se mais favorAvel ao r\u00c3\u00a9u, motivo pelo qual deve ser aplicado em seu favor, em detrimento da regra de exaspera\u00c3\u00a7\u00c3\u00a3o do crime continuado. II Na terceira etapa da dosimetria do delito de roubo tentado deve ser aplicada a causa de diminui\u00c3\u00a7\u00c3\u00a3o de pena prevista no art. 14, II do CP em sua fra\u00c3\u00a7\u00c3\u00a3o mAxima de 2\\/3, na medida em que o agente pouco se aproximou da efetiva subtra\u00c3\u00a7\u00c3\u00a3o do bem da vItima, que foi avisada de que o r\u00c3\u00a9u n\u00c3\u00a3o estava armado e se negou a entregar seus pertences. III- Penalidades privativa de liberdade e de multa redimensionadas de acordo com as balizas legais abstratas. IV - Recurso conhecido e provido.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:acatada\n---\nTexto da decis\u00c3\u00a3o:\nAPELA\u00c3\u2021\u00c3\u0192O CIVEL. A\u00c3\u2021\u00c3\u0192O COMINAT\u00c3\u201cRIA COM PEDIDO DE ANTECIPA\u00c3\u2021\u00c3\u0192O DE TUTELA. FORNECIMENTO DE MEDICAMENTOS. PRELIMINAR N\u00c3\u0192O ACOLHIDA. LEGITIMIDADE PASSIVA DO MUNICIPIO DE RIO LARGO CONFIGURADA. RESPONSABILIDADE SOLIDARIA ENTRE OS ENTES FEDERADOS. TESE DE CHAMAMENTO AO PROCESSO DO ESTADO DE ALAGOAS REJEITADA. PRINCIPIO DA DIGNIDADE DA PESSOA HUMANA. PREVAL\u00c3\u0160NCIA DO DIREITO \u00c3\u20ac SA\u00c3\u0161DE EM DETRIMENTO \u00c3\u20acS LIMITA\u00c3\u2021\u00c3\u2022ES OR\u00c3\u2021AMENTARIAS DO PODER P\u00c3\u0161BLICO. HONORARIOS SUCUMBENCIAIS, CONSIDERADO O TRABALHO ADICIONAL EM FASE RECURSAL. RECURSO CONHECIDO E N\u00c3\u0192O PROVIDO. UNANIMIDADE.\n---\nAvalia\u00c3\u00a7\u00c3\u00a3o:  ",
+                "engine": "gpt-35-turbo-instruct",
+                "suffix": null,
+                "max_tokens": 16,
+                "temperature": 0.5,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "logprobs": null,
+                "echo": false,
+                "stop": null,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "best_of": 1,
+                "logit_bias": {},
+                "user": "",
+                "api_base": "https://openairacz.openai.azure.com/",
+                "api_type": "azure",
+                "api_version": "2023-07-01-preview"
+              },
+              "output": {
+                "id": "cmpl-89yqi58F20kv7szbIqOxxG4g0f3gG",
+                "object": "text_completion",
+                "created": 1697389548,
+                "model": "gpt-35-turbo-instruct",
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "choices": [
+                  {
+                    "text": " acatada",
+                    "index": 0,
+                    "finish_reason": "stop",
+                    "logprobs": null,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "usage": {
+                  "completion_tokens": 3,
+                  "prompt_tokens": 1365,
+                  "total_tokens": 1368
+                }
+              },
+              "start_time": 1697400347.972448,
+              "end_time": 1697400348.749577,
+              "error": null,
+              "children": null,
+              "node_name": null
+            }
+          ],
+          "node_name": "few_shot"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 3,
+        "prompt_tokens": 1365,
+        "total_tokens": 1368,
+        "duration": 0.824965
+      },
+      "result": " acatada"
+    },
+    {
+      "node": "normalize",
+      "flow_run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f",
+      "run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f_normalize_0",
+      "status": "Completed",
+      "inputs": {
+        "text": " acatada"
+      },
+      "output": "acatada",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "fc229b60-220c-4235-a3b4-a170a1ff082f_0",
+      "start_time": "2023-10-15T17:05:48.794777Z",
+      "end_time": "2023-10-15T17:05:48.803268Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Tool",
+          "inputs": {
+            "text": " acatada"
+          },
+          "output": "acatada",
+          "start_time": 1697400348.794777,
+          "end_time": 1697400348.79826,
+          "error": null,
+          "children": null,
+          "node_name": "normalize"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.008491
+      },
+      "result": "acatada"
+    }
+  ]
+}

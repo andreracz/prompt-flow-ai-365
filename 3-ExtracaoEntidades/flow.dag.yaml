@@ -1,0 +1,42 @@
+inputs:
+  texto:
+    type: string
+    default: "Olá, meu nome é João da Silva, estou ligando da Mineiradora Contoso,
+      em Vitória. Estou ligando pois meu e-mail não está funcionando. Por favor
+      me ligue no telefone: 011 9555-1234. "
+outputs:
+  nome:
+    type: string
+    reference: ${to_dict.output.nome}
+  empresa:
+    type: string
+    reference: ${to_dict.output.empresa}
+  localidade:
+    type: string
+    reference: ${to_dict.output.localidade}
+  telefone:
+    type: string
+    reference: ${to_dict.output.telefone}
+  assunto:
+    type: string
+    reference: ${to_dict.output.assunto}
+nodes:
+- name: extracao_entidades
+  type: llm
+  source:
+    type: code
+    path: extracao_entidades.jinja2
+  inputs:
+    text: ${inputs.texto}
+    deployment_name: gpt-35-turbo-instruct
+    max_tokens: 100
+    temperature: 0.5
+  connection: openai
+  api: completion
+- name: to_dict
+  type: python
+  source:
+    type: code
+    path: to_dict.py
+  inputs:
+    input1: ${extracao_entidades.output}
